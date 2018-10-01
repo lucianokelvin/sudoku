@@ -1,3 +1,6 @@
+package test;
+import classes.Sudoku;
+import solver.Solver;
 
 public class Main {
 	
@@ -7,6 +10,7 @@ public class Main {
 		Solver solver = new Solver(sudoku);
 		sudoku.printSudoku();
 	}
+	
 	
 	private static Sudoku sample1() {
 		return new Sudoku(

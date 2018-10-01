@@ -1,7 +1,8 @@
+package classes;
 
 public class Sudoku {
 
-	int sudoku[][] = new int[9][9];
+	private int sudoku[][] = new int[9][9];
 	
 	public Sudoku() {
 		// TODO Auto-generated constructor stub
@@ -18,7 +19,6 @@ public class Sudoku {
 		}
 	}
 	
-	
 	public void printSudoku() {
 		for (int i = 0; i < sudoku.length; i++) {
 			for (int j = 0; j < sudoku.length; j++) {
@@ -26,6 +26,14 @@ public class Sudoku {
 			}
 			System.out.println();
 		}
+	}
+	
+	public int[][] getSudoku() {
+		return sudoku;
+	}
+
+	public void setSudoku(int[][] sudoku) {
+		this.sudoku = sudoku;
 	}
 	
 }

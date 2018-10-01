@@ -1,4 +1,8 @@
+package solver;
 import java.util.ArrayList;
+
+import classes.Position;
+import classes.Sudoku;
 
 public class Solver {
 
@@ -6,15 +10,15 @@ public class Solver {
 	private ArrayList<Position> freePositions = new ArrayList<>();
 	
 	public Solver(Sudoku sudoku) {
-		for (int i = 0; i < sudoku.sudoku.length; i++) {
-			for (int j = 0; j < sudoku.sudoku.length; j++) {
-				if (sudoku.sudoku[i][j] == 0) {
+		for (int i = 0; i < sudoku.getSudoku().length; i++) {
+			for (int j = 0; j < sudoku.getSudoku().length; j++) {
+				if (sudoku.getSudoku()[i][j] == 0) {
 					Position p = new Position(i, j);
 					freePositions.add(p);
 				}
 			}
 		}
-		solveSudoku(sudoku.sudoku);
+		solveSudoku(sudoku.getSudoku());
 	}
 
 	private void solveSudoku(int[][] sudoku) {
